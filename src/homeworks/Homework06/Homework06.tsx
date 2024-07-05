@@ -22,13 +22,12 @@ function Homework06() {
       <div className="car-card">
         <p>{value.brand}</p>
         <p>{value.price}</p>
-        {/* почему то булеан не отображается в карточках, не понимаю в чем проблема  */}
-        <p>{value.isDiesel}</p>
+        <p>{value.isDiesel ? "Diesel" : "Benzin"}</p>
       </div>
     );
   });
 
-  return <div className="car-cards-comtainer">{carsList}</div>;
+  return <div className="car-cards-container">{carsList}</div>;
 }
 
 export default Homework06;

@@ -1,5 +1,6 @@
-.car-cards-comtainer {
+.car-cards-container {
   display: flex;
+  align-items: flex-start;
   gap: 30px;
   flex: 1;
   padding: 30px;
@@ -13,5 +14,4 @@
   border-radius: 8px;
   padding: 10px;
   width: 100px;
-  height: 100px;
 }
