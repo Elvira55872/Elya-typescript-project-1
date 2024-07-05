@@ -1,4 +1,5 @@
 import "./styles.css";
+import {v4} from "uuid"
 
 function Homework06() {
   type Car = {
@@ -15,11 +16,9 @@ function Homework06() {
     { brand: "Audi", price: 50000, isDiesel: true },
   ];
 
-  console.log(cars[0].isDiesel);
-
   const carsList = cars.map((value) => {
     return (
-      <div className="car-card">
+      <div className="car-card" key={v4()}>
         <p>{value.brand}</p>
         <p>{value.price}</p>
         <p>{value.isDiesel ? "Diesel" : "Benzin"}</p>
