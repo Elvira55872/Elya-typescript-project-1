@@ -1,8 +1,6 @@
 import "./styles.css";
 import { InputProps } from "./types";
 
-
-
 function Input({ id, name, type, placeholder, label }: InputProps) {
   return (
     <div className="input-wrapper">
