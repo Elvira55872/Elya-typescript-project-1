@@ -1,3 +1,7 @@
+import { useState } from "react";
+
+// import Like from "assets/like.png";
+
 import Button from "components/Button/Button";
 
 import { FeedbackProps } from "./types";
