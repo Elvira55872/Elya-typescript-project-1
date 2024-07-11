@@ -14,8 +14,18 @@ const Homework08 = () => {
         label="Name"
         disabled={true}
       />
+      <Input
+        id="hgf563gegvzd56"
+        name="surname"
+        type="surname"
+        placeholder="write your surname"
+        label="Surname"
+        disabled={false}
+        error="Some error"
+      />
       <ButtonWrapper>
-        <Button name="Click" onClick={() => {}} />{" "}
+        <Button name="Click" onClick={() => {}} disabled={true} />
+        <Button name="Click" onClick={() => {}} isRed={true} />
       </ButtonWrapper>
     </PageWrapper>
   );

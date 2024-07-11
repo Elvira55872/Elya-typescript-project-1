@@ -4,7 +4,15 @@ interface StyledInputProps {
   $error: string | undefined;
 }
 
-const gerInputColor = (disabled: boolean | undefined) => {
+const getStyledInputBorder = (error: string | undefined) =>{
+  if (error === "Some error"){
+    return "red"
+  } else if ( error === undefined){
+    return "#3f3f3f"
+  }
+}
+
+const getInputColor = (disabled: boolean | undefined) => {
   if (disabled) {
     return "gray";
   } else {
@@ -26,11 +34,12 @@ export const InputLabel = styled("label")`
 export const InputComponent = styled("input")`
   width: 100%;
   height: 50px;
-  border: 1px solid #3f3f3f;
+  // !! тут не работает из за той же ошибки с error
+  // border: 1px solid ${({error})=> getStyledInputBorder(error)};
   border-radius: 4px;
   padding: 12px;
   outline: none;
-  background-color: ${({ disabled }) => gerInputColor(disabled)};
+  background-color: ${({ disabled }) => getInputColor(disabled)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   &::placeholder {
