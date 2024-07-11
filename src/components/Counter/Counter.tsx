@@ -1,6 +1,6 @@
-import "./styles.css";
+import { CounterWrapper, ButtonControl, Count } from "./styles";
 
-import Button from "../Button/Button";
+import Button from "components/Button/Button";
 
 interface CounterProps {
   count: number;
@@ -10,15 +10,15 @@ interface CounterProps {
 
 function Counter({ count, onPlus, onMinus }: CounterProps) {
   return (
-    <div className="counter-wrapper">
-      <div className="button-control">
+    <CounterWrapper>
+      <ButtonControl>
         <Button name="-" onClick={onMinus} />
-      </div>
-      <p className="count">{count}</p>
+      </ButtonControl>
+      <Count>{count}</Count>
       <div className="button-control">
         <Button name="+" onClick={onPlus} />
       </div>
-    </div>
+    </CounterWrapper>
   );
 }
 

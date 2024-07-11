@@ -5,7 +5,7 @@ import LoginForm from "components/LoginForm/LoginForm";
 import Input from "components/Input/Input";
 import Feedback from "components/Feedback/Feedback";
 
-import "./styles.css";
+import { Homework07Wrapper } from "./styles";
 
 function Homework07() {
   const [like, setLike] = useState<number>(0);
@@ -24,7 +24,7 @@ function Homework07() {
   };
 
   return (
-    <div className="homework07-wrapper">
+    <Homework07Wrapper>
       <SimponsCard
         avatar="https://static.printler.com/cache/b/4/3/5/4/a/b4354af4c63060662b75534d520a7f5c182617e5.jpg"
         firstName="Homer"
@@ -47,7 +47,7 @@ function Homework07() {
         onDislike={onDislike}
         resetResults={resetResults}
       />
-    </div>
+    </Homework07Wrapper>
   );
 }
 
