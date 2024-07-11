@@ -34,8 +34,7 @@ export const InputLabel = styled("label")`
 export const InputComponent = styled("input")<StyledInputProps>`
   width: 100%;
   height: 50px;
-  // !! тут не работает из за той же ошибки с error
-  // border: 1px solid ${({error})=> getStyledInputBorder(error)};
+  border: 1px solid ${({$error})=> getStyledInputBorder($error)};
   border-radius: 4px;
   padding: 12px;
   outline: none;
