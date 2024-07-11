@@ -31,7 +31,7 @@ export const InputLabel = styled("label")`
   color: hsl(0, 0%, 44%);
 `;
 
-export const InputComponent = styled("input")`
+export const InputComponent = styled("input")<StyledInputProps>`
   width: 100%;
   height: 50px;
   // !! тут не работает из за той же ошибки с error
