@@ -7,8 +7,8 @@ function Input({
   type,
   placeholder,
   label,
-  disabled,
-  error,
+  disabled = false,
+  error = undefined,
 }: InputProps) {
   return (
     <InputWrapper>
@@ -21,7 +21,7 @@ function Input({
         disabled={disabled}
         // !! error подсвечивается красным, не могу решить эту проблему, уже все перепроверила и переписала как в разборе ДЗ
         // !! помоги пожалуйста
-        // $error={error}
+         error={error}
       />
     </InputWrapper>
   );

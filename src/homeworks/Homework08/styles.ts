@@ -10,6 +10,5 @@ export const PageWrapper = styled("div")`
 `;
 
 export const ButtonWrapper = styled("div")`
- height: 30px;
  width: 200px;
 `;

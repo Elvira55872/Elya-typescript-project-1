@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 interface StyledInputProps {
-  $error: string | undefined;
+  error: string | undefined;
 }
 
 const getStyledInputBorder = (error: string | undefined) =>{
@@ -34,7 +34,7 @@ export const InputLabel = styled("label")`
 export const InputComponent = styled("input")<StyledInputProps>`
   width: 100%;
   height: 50px;
-  border: 1px solid ${({$error})=> getStyledInputBorder($error)};
+  border: 1px solid ${({error})=> getStyledInputBorder(error)};
   border-radius: 4px;
   padding: 12px;
   outline: none;
