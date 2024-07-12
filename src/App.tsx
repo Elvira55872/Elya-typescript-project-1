@@ -7,11 +7,9 @@ import Lesson07 from "lessons/Lesson07/Lesson07";
 import Lesson_08 from "lessons/Lesson08/Lesson08";
 import Homework08 from "homeworks/Homework08/Homework08";
 
-import { AppStyledDiv } from "./AppStyles";
-
 function App() {
   return (
-    <AppStyledDiv>
+    <>
       <GlobalStyles />
       {/* <Lesson06 /> */}
       {/* <Homework06/> */}
@@ -19,7 +17,7 @@ function App() {
       {/* <Homework07 /> */}
       {/* <Lesson_08 /> */}
       <Homework08 />
-    </AppStyledDiv>
+    </>
   );
 }
 
