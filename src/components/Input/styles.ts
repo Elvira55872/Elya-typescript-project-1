@@ -39,7 +39,7 @@ export const InputComponent = styled("input")<StyledInputProps>`
   padding: 12px;
   outline: none;
   background-color: ${({ disabled }) => getInputColor(disabled)};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "text")};
 
   &::placeholder {
     color: #6f6f6f;

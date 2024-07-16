@@ -6,42 +6,42 @@ import { Lesson09Wrapper, InputControl } from "./styles";
 import Button from "components/Button/Button";
 
 function Lesson_09() {
-  // // searchInputValue - значение инпута которое вводим
-  // // setsearchInputValue - функция которая задает значение
-  // const [searchInputValue, setsearchInputValue] = useState<string>("");
+  // searchInputValue - значение инпута которое вводим
+  // setsearchInputValue - функция которая задает значение
+  const [searchInputValue, setsearchInputValue] = useState<string>("");
 
-  // const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
-  //   // console.log("инпут ивент");
-  //   // console.log(event.target.value);
+  const onChangeInput = (event: ChangeEvent<HTMLInputElement>) => {
+    // console.log("инпут ивент");
+    // console.log(event.target.value);
 
-  //   setsearchInputValue(event.target.value);
-  // };
+    setsearchInputValue(event.target.value);
+  };
 
-  // // console.log(searchInputValue);
+  // console.log(searchInputValue);
 
-  // const onSearch = () => {
-  //   console.log(searchInputValue)
-  // };
+  const onSearch = () => {
+    console.log(searchInputValue)
+  };
 
 // !! //////////////////////////////////////////////////////////////////////////
 
-  // // 1 стадия жизни mounting
-  // // 1 аргумент - функция, которая должна выполнится в определенный жизненный цикл компонента
-  // // 2 аргумент - массив зависимостей, с помощью него мы можем определить жизненный цикл компонента
-  // // Если мы прокидываем пустой массив во 2 аргументе, то мы определяем 1 фазу жизненного цикла - Mounting
-  // useEffect(()=>{
-  //   console.log("mounting")
-  // }, [])
+  // 1 стадия жизни mounting
+  // 1 аргумент - функция, которая должна выполнится в определенный жизненный цикл компонента
+  // 2 аргумент - массив зависимостей, с помощью него мы можем определить жизненный цикл компонента
+  // Если мы прокидываем пустой массив во 2 аргументе, то мы определяем 1 фазу жизненного цикла - Mounting
+  useEffect(()=>{
+    console.log("mounting")
+  }, [])
 
-  //  // 2 фаза - Updating
-  //  useEffect(()=>{
-  //   console.log("mounting")
-  // }, [searchInputValue])
+   // 2 фаза - Updating
+   useEffect(()=>{
+    console.log("mounting")
+  }, [searchInputValue])
 
-  // // 3 фаза - Unmounting
-  // useEffect(()=>{return ()=> {
-  //   console.log("Unmounting");
-  // }  }, [])
+  // 3 фаза - Unmounting
+  useEffect(()=>{return ()=> {
+    console.log("Unmounting");
+  }  }, [])
 
   return (
     <Lesson09Wrapper>
