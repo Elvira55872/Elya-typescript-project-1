@@ -1,5 +1,3 @@
-import "./styles.css";
-
 function Lesson_06() {
   // 1 тип: string - строковый
   let userFullname: string = "John Johnson";
