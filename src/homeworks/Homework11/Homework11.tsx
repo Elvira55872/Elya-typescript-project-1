@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-
 import { Homework11Wrapper } from "./styles";
 import ContactUs from "components/ContactUs/ContactUs";
 
