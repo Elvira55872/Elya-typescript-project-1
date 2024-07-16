@@ -1,34 +1,34 @@
-import { InputWrapper, InputLabel, InputComponent } from "./styles";
 import { InputProps } from "./types";
+import { StyledInput, InputWrapper, InputLabel, ErrorContainer } from "./styles";
 
 function Input({
   id,
   name,
-  type,
+  type = "text",
   placeholder,
   label,
-  disabled = false,
-  error = undefined,
+  disabled,
+  error,
   value,
   onChange,
 }: InputProps) {
+  // console.log(error)
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>{label}</InputLabel>
-      <InputComponent
+      <StyledInput
+        disabled={disabled}
         id={id}
         name={name}
         type={type}
         placeholder={placeholder}
-        disabled={disabled}
-        // !! error подсвечивается красным, не могу решить эту проблему, уже все перепроверила и переписала как в разборе ДЗ
-        // !! помоги пожалуйста
-        error={error}
-                // value - значение самого инпута, которое ввел пользователь
+        $error={error}
+        // value - это значение самого инпута, т.е то значение котрое введет потенциальный пользователь
         value={value}
-                // onChange - функция которая срабатывает при вводе чего тто в инпут
+        // onChange - функция, которая срабатывает, когда пользователь что-то вводит в инпут
         onChange={onChange}
       />
+      {!!error && <ErrorContainer>{error}</ErrorContainer>}
     </InputWrapper>
   );
 }
