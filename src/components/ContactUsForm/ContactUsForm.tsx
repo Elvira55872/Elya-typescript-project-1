@@ -4,10 +4,10 @@ import * as Yup from "yup";
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 
-import { ContactUsForm, TitleContactUsForm } from "./styles";
+import { ContactUsFormContainer, TitleContactUsForm } from "./styles";
 import { CONTACT_US_FORM_NAMES } from "./types";
 
-function ContactUs() {
+function ContactUsForm() {
   const validationScheme = Yup.object().shape({
     [CONTACT_US_FORM_NAMES.NAME]: Yup.string()
       .required("Full name is required")
@@ -39,7 +39,7 @@ function ContactUs() {
   });
 
   return (
-    <ContactUsForm onSubmit={formic.handleSubmit}>
+    <ContactUsFormContainer onSubmit={formic.handleSubmit}>
       <TitleContactUsForm>Contact us</TitleContactUsForm>
       <Input
         id="input-1"
@@ -69,8 +69,8 @@ function ContactUs() {
         error={formic.errors[CONTACT_US_FORM_NAMES.EMAIL]}
       />
       <Button name="SEND REQUEST" type="submit" />
-    </ContactUsForm>
+    </ContactUsFormContainer>
   );
 }
 
-export default ContactUs;
+export default ContactUsForm;

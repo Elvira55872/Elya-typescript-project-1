@@ -1,5 +1,5 @@
 import { Homework11Wrapper } from "./styles";
-import ContactUs from "components/ContactUs/ContactUs";
+import ContactUs from "components/ContactUsForm/ContactUsForm";
 
 function Homework_11() {
   return (

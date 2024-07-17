@@ -20,13 +20,14 @@ const getButtonColor = (
 };
 
 export const StyledButton = styled("button")<StyledButtonProps>`
-  height: 70px;
+  height: 50px;
   width: 100%;
+  padding: 10px;
   border: none;
   border-radius: 4px;
   font-size: 20px;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: ${({ disabled, $isRed }) =>
     getButtonColor(disabled, $isRed)};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
