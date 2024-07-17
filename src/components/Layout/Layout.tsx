@@ -18,10 +18,12 @@ function Layout({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <Logo>
-          <LogoImg
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
-            alt="App logo"
-          />
+          <Link to="/">
+            <LogoImg
+              src="https://cdn.pixabay.com/photo/2017/09/03/00/44/png-2709031_640.png"
+              alt="App logo"
+            />
+          </Link>
         </Logo>
         <NavigationContainer>
           <Link
@@ -60,21 +62,34 @@ function Layout({ children }: LayoutProps) {
           >
             Log In
           </Link>
+
+          <Link
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/clients"
+          >
+            Clients
+          </Link>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
       <Footer>
         <FooterLogo>
-          <LogoImg
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
-            alt="App logo"
-          />
+        <Link to="/">
+            <LogoImg
+              src="https://cdn.pixabay.com/photo/2017/09/03/00/44/png-2709031_640.png"
+              alt="App logo"
+            />
+          </Link>
         </FooterLogo>
         <FooterNavigation>
           <FooterLink to="/">Home</FooterLink>
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Log In</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>

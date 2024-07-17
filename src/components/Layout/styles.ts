@@ -22,7 +22,7 @@ export const Header = styled.header`
 
 export const Logo = styled.div`
   height: 100%;
-  width: 80px;
+  width: 90px;
 `;
 
 export const LogoImg = styled.img`
@@ -63,8 +63,8 @@ export const Footer = styled.footer`
 `;
 
 export const FooterLogo = styled.div`
-  height: 80px;
-  width: 80px;
+  height: 100%;
+  width: 200px;
 `;
 
 export const FooterNavigation = styled.nav`
