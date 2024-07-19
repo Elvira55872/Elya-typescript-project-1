@@ -44,8 +44,8 @@ function App() {
         </Layout> */}
         <Layout_Team_1>
           <Routes>
-            <Route />
-            <Route />
+            <Route path="/create" element={}/>
+            <Route parh="/employees" element={}/>
           </Routes>
         </Layout_Team_1>
         {/* <Lesson06 /> */}
