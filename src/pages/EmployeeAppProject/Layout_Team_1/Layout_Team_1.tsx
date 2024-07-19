@@ -1,20 +1,18 @@
 import { useNavigate } from "react-router-dom";
-import { Employee } from "./types";
+
 
 import {
   LayoutWrapper,
   Header,
   Main,
-  Footer,
+
   Link,
   Logo,
-  FooterLogo,
   LogoImg,
   NavigationContainer,
-  FooterNavigation,
-  FooterLink,
 } from "./styles";
-import { LayoutProps } from "./types";
+import { LayoutProps, Employee } from "./types";
+
 
 function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
@@ -27,7 +25,8 @@ function Layout_Team_1({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <Logo onClick={goToHomePage}>
-          <LogoImg src="" alt="" />
+
+          <LogoImg src="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png" alt="" />
         </Logo>
         <NavigationContainer>
           <Link
@@ -49,21 +48,7 @@ function Layout_Team_1({ children }: LayoutProps) {
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
-      <Footer>
-        <FooterLogo>
-          <LogoImg
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
-            alt="App logo"
-          />
-        </FooterLogo>
-        <FooterNavigation>
-          <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/clients">Clients</FooterLink>
-          <FooterLink to="/contactUs">Contact Us</FooterLink>
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/login">Log In</FooterLink>
-        </FooterNavigation>
-      </Footer>
+
     </LayoutWrapper>
   );
 }
