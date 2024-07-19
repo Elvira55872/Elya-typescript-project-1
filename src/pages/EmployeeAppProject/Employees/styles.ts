@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { COLORS_TEAM_1 } from "../Layout/styles";
+import { COLORS_TEAM_1 } from "../Layout_Team_1/styles"; 
 
 export const EmployeesCard = styled.div`
 display: flex;
