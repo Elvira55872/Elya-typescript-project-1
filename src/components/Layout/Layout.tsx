@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 import {
   LayoutWrapper,
   Header,
@@ -14,16 +16,20 @@ import {
 import { LayoutProps } from "./types";
 
 function Layout({ children }: LayoutProps) {
+  const navigate = useNavigate();
+
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <LayoutWrapper>
       <Header>
-        <Logo>
-          <Link to="/">
-            <LogoImg
-              src="https://cdn.pixabay.com/photo/2017/09/03/00/44/png-2709031_640.png"
-              alt="App logo"
-            />
-          </Link>
+        <Logo onClick={goToHomePage}>
+          <LogoImg
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
+            alt="App logo"
+          />
         </Logo>
         <NavigationContainer>
           <Link
@@ -34,6 +40,15 @@ function Layout({ children }: LayoutProps) {
             to="/"
           >
             Home
+          </Link>
+          <Link
+            style={({ isActive }) => ({
+              fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
+            })}
+            to="/clients"
+          >
+            Clients
           </Link>
           <Link
             style={({ isActive }) => ({
@@ -62,34 +77,22 @@ function Layout({ children }: LayoutProps) {
           >
             Log In
           </Link>
-
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/clients"
-          >
-            Clients
-          </Link>
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
       <Footer>
         <FooterLogo>
-        <Link to="/">
-            <LogoImg
-              src="https://cdn.pixabay.com/photo/2017/09/03/00/44/png-2709031_640.png"
-              alt="App logo"
-            />
-          </Link>
+          <LogoImg
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxOGDYH2tzlcwZSDpjg0qRGgEHAxVhsKHFUg&s"
+            alt="App logo"
+          />
         </FooterLogo>
         <FooterNavigation>
           <FooterLink to="/">Home</FooterLink>
+          <FooterLink to="/clients">Clients</FooterLink>
           <FooterLink to="/contactUs">Contact Us</FooterLink>
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/login">Log In</FooterLink>
-          <FooterLink to="/clients">Clients</FooterLink>
         </FooterNavigation>
       </Footer>
     </LayoutWrapper>

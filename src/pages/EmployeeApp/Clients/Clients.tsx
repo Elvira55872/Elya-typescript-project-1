@@ -1,32 +1,22 @@
-import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-import { PageWrapper, ButtonContainer, ClientsList, Link , Titel} from "./styles";
-import Button from "components/Button/Button";
+import { PageWrapper, NavContainer, ClientsLink } from "./styles";
 
 function Clients() {
-  const navigate = useNavigate();
-
-  const goToHomePage = () => {
-    navigate("/");
-  };
-
+  useEffect(() => {
+    // Unmounting
+    return () => {
+      console.log("Unmounting Clients Component");
+    };
+  }, []);
+  
   return (
     <PageWrapper>
-      <Titel>Clients of the company</Titel>
-      <ClientsList>
-        <li>
-          <Link to="/clients/client_1">Rooster 1</Link>
-        </li>
-        <li>
-          <Link to="/clients/client_2">Rooster 2</Link>
-        </li>
-        <li>
-          <Link to="/clients/client_3">Rooster 3</Link>
-        </li>
-      </ClientsList>
-      <ButtonContainer>
-        <Button name="Home Page" onClick={goToHomePage} />
-      </ButtonContainer>
+      <NavContainer>
+        <ClientsLink to="/clients/apple">Apple</ClientsLink>
+        <ClientsLink to="/clients/facebook">Facebook</ClientsLink>
+        <ClientsLink to="/clients/google">Google</ClientsLink>
+      </NavContainer>
     </PageWrapper>
   );
 }
