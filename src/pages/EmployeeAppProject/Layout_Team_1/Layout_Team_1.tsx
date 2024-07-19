@@ -9,7 +9,7 @@ import {
   LogoImg,
   NavigationContainer,
 } from "./styles";
-import { LayoutProps } from "./types";
+import { LayoutProps, Employee } from "./types";
 
 function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
