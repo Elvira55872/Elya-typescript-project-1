@@ -32,6 +32,7 @@ function Layout_Team_1({ children }: LayoutProps) {
           <Link
             style={({ isActive }) => ({
               fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
             })}
             to=""
           >
@@ -40,6 +41,7 @@ function Layout_Team_1({ children }: LayoutProps) {
           <Link
             style={({ isActive }) => ({
               fontWeight: isActive ? "bold" : "normal",
+              textDecoration: isActive ? "underline" : "none",
             })}
             to=""
           >
