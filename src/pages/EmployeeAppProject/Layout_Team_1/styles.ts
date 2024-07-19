@@ -7,6 +7,7 @@ export enum COLORS_TEAM_1 {
   CARD_WHITE = "#FFFFFF",
 }
 
+
 export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;

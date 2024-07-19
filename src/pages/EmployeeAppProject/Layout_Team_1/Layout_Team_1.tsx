@@ -1,15 +1,18 @@
 import { useNavigate } from "react-router-dom";
 
+
 import {
   LayoutWrapper,
   Header,
   Main,
+
   Link,
   Logo,
   LogoImg,
   NavigationContainer,
 } from "./styles";
 import { LayoutProps, Employee } from "./types";
+
 
 function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
@@ -22,6 +25,7 @@ function Layout_Team_1({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <Logo onClick={goToHomePage}>
+
           <LogoImg src="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png" alt="" />
         </Logo>
         <NavigationContainer>
@@ -44,6 +48,7 @@ function Layout_Team_1({ children }: LayoutProps) {
         </NavigationContainer>
       </Header>
       <Main>{children}</Main>
+
     </LayoutWrapper>
   );
 }
