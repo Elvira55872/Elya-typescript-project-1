@@ -7,9 +7,9 @@ import About from "pages/EmployeeApp/About/About";
 import LogIn from "pages/EmployeeApp/LogIn/LogIn";
 import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
 import Clients from "pages/EmployeeApp/Clients/Clients";
-import Client_1 from "pages/EmployeeApp/Clients/Client_1/Client_1";
-import Client_2 from "pages/EmployeeApp/Clients/Client_2/Client_2";
-import Client_3 from "pages/EmployeeApp/Clients/Client_3/Client_3";
+import Apple from "pages/EmployeeApp/Clients/Apple/Apple";
+import Google from "pages/EmployeeApp/Clients/Google/Google";
+import Facebook from "pages/EmployeeApp/Clients/Facebook/Facebook";
 
 import Homework07 from "homeworks/Homework07/Homework07";
 import Homework06 from "homeworks/Homework06/Homework06";
@@ -34,9 +34,9 @@ function App() {
             <Route path="/contactUs" element={<ContactUs />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/clients" element={<Clients />} />
-            <Route path="/clients/client_1" element={<Client_1 />} />
-            <Route path="/clients/client_2" element={<Client_2 />} />
-            <Route path="/clients/client_3" element={<Client_3 />} />
+            <Route path="/clients/client_1" element={<Apple />} />
+            <Route path="/clients/client_2" element={<Google />} />
+            <Route path="/clients/client_3" element={<Facebook />} />
             <Route path="*" element="Page Not Found!!!" />
           </Routes>
         </Layout>
