@@ -1,6 +1,3 @@
-
-
-
 import { useNavigate } from "react-router-dom";
 import { Employee } from "./types";
 
@@ -19,7 +16,7 @@ import {
 } from "./styles";
 import { LayoutProps } from "./types";
 
-function Layout({ children }: LayoutProps) {
+function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
@@ -30,10 +27,7 @@ function Layout({ children }: LayoutProps) {
     <LayoutWrapper>
       <Header>
         <Logo onClick={goToHomePage}>
-          <LogoImg
-            src=""
-            alt=""
-          />
+          <LogoImg src="" alt="" />
         </Logo>
         <NavigationContainer>
           <Link
@@ -74,4 +68,4 @@ function Layout({ children }: LayoutProps) {
   );
 }
 
-export default Layout;
+export default Layout_Team_1;
