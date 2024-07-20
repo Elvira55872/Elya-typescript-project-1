@@ -9,47 +9,48 @@ import {
   LogoImg,
   NavigationContainer,
 } from "./styles";
-import { LayoutProps, Employee } from "./types";
+
+import { LayoutProps, Employee, PagesPaths } from "./types";
+
 
 function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
-
   const goToHomePage = () => {
-    navigate("/");
+    navigate(PagesPaths.HOME);
   };
 
   return (
-    <LayoutWrapper>
-      <Header>
-        <Logo onClick={goToHomePage}>
-          <LogoImg
-            src="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png"
-            alt=""
-          />
-        </Logo>
-        <NavigationContainer>
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/create"
-          >
-            Create Employee
-          </Link>
-          <Link
-            style={({ isActive }) => ({
-              fontWeight: isActive ? "bold" : "normal",
-              textDecoration: isActive ? "underline" : "none",
-            })}
-            to="/employees"
-          >
-            Employees
-          </Link>
-        </NavigationContainer>
-      </Header>
-      <Main>{children}</Main>
-    </LayoutWrapper>
+      <LayoutWrapper>
+        <Header>
+          <Logo onClick={goToHomePage}>
+            <LogoImg
+              src="https://static.vecteezy.com/system/resources/thumbnails/012/986/755/small/abstract-circle-logo-icon-free-png.png"
+              alt=""
+            />
+          </Logo>
+          <NavigationContainer>
+            <Link
+              style={({ isActive }) => ({
+                fontWeight: isActive ? "bold" : "normal",
+                textDecoration: isActive ? "underline" : "none",
+              })}
+              to={PagesPaths.CREATE_EMPLOYEES}
+            >
+              Create Employee
+            </Link>
+            <Link
+              style={({ isActive }) => ({
+                fontWeight: isActive ? "bold" : "normal",
+                textDecoration: isActive ? "underline" : "none",
+              })}
+              to={PagesPaths.EMPLOYEES}
+            >
+              Employees
+            </Link>
+          </NavigationContainer>
+        </Header>
+        <Main>{children}</Main>
+      </LayoutWrapper>
   );
 }
 
