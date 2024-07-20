@@ -10,3 +10,8 @@ export interface Employee {
   age: number;
   jobPosition?: string;
 }
+export enum PagesPaths {
+  HOME = "/",
+  CREATE_EMPLOYEES = "/create",
+  EMPLOYEES = "/employees",
+}
