@@ -21,10 +21,9 @@ export const Header = styled.header`
   justify-content: space-between;
   width: 100%;
   height: 100px;
-  /* border-bottom: 1px solid black; */
   background-color: ${COLORS_TEAM_1.HEADER_WHITE};
   padding: 20px 40px;
-  color: white;
+  color: black;
 `;
 
 export const Logo = styled.div`
@@ -46,7 +45,6 @@ export const NavigationContainer = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
-//Прошу прощения, что влез сюда но белое на белом не было видно.
   color: black;
   font-size: 20px;
   font-weight: normal;
@@ -55,6 +53,8 @@ export const Link = styled(NavLink)`
 
 export const Main = styled.main`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   padding: 40px;
 `;
