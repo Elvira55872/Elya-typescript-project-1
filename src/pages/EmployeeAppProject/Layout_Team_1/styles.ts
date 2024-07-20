@@ -46,7 +46,8 @@ export const NavigationContainer = styled.nav`
 `;
 
 export const Link = styled(NavLink)`
-  color: white;
+//Прошу прощения, что влез сюда но белое на белом не было видно.
+  color: black;
   font-size: 20px;
   font-weight: normal;
   text-decoration: none;
