@@ -1,4 +1,6 @@
+import CreateEmployeeForm from "../components/CreateEmployeeForm/CreateEmployeeForm";
+
 function CreateEmployee(){
-    return<></>
+    return <CreateEmployeeForm/>
 }
 export default CreateEmployee;

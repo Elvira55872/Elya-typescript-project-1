@@ -23,6 +23,8 @@ import Lesson_11 from "lessons/Lesson11/Lesson_11";
 import Homework_11 from "homeworks/Homework11/Homework11";
 
 import Layout_Team_1 from "pages/EmployeeAppProject/Layout_Team_1/Layout_Team_1";
+import CreateEmployee from "pages/EmployeeAppProject/CreateEmployee/CreateEmployee";
+import Employees from "pages/EmployeeAppProject/Employees/Employees";
 
 function App() {
   return (
@@ -44,8 +46,8 @@ function App() {
         </Layout> */}
         <Layout_Team_1>
           <Routes>
-            <Route path="/create" element={}/>
-            <Route parh="/employees" element={}/>
+            <Route path="/create" element={<CreateEmployee />} />
+            <Route path="/employees" element={<Employees />} />
           </Routes>
         </Layout_Team_1>
         {/* <Lesson06 /> */}
