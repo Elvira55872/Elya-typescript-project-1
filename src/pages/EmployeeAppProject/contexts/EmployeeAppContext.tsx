@@ -1,8 +1,4 @@
-import {
-  useState,
-  createContext,
-  PropsWithChildren,
-} from "react";
+import { useState, createContext, PropsWithChildren } from "react";
 
 import { Employee } from "pages/EmployeeAppProject/Layout_Team_1/types";
 
@@ -15,19 +11,17 @@ export const EmployeeAppContext = createContext<EmployeeContextType>({
   employee: {
     name: "",
     surName: "",
-    age: 0,
+    age: "",
     jobPosition: "",
   },
   setEmployee: () => {},
 });
 
-export const EmployeeAppContextProvider = ({
-  children,
-}: PropsWithChildren) => {
+export const EmployeeAppContextProvider = ({ children }: PropsWithChildren) => {
   const [employee, setEmployee] = useState<Employee>({
     name: "",
     surName: "",
-    age: 0,
+    age: "",
     jobPosition: "",
   });
 

@@ -33,7 +33,7 @@ function CreateEmployeeForm() {
     initialValues: {
       name: "",
       surName: "",
-      age: 0,
+      age: "",
       jobPosition: "",
     },
     validationSchema: validationSchema,
@@ -89,7 +89,7 @@ function CreateEmployeeForm() {
         />
         <Input
           id="job-id"
-          name="job_position"
+          name="jobPosition"
           type="text"
           placeholder="QA"
           label="Job Position"

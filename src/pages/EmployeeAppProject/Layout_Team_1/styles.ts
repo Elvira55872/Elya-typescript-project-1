@@ -1,12 +1,11 @@
 import styled from "@emotion/styled";
-import { NavLink, Link as SimpleLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export enum COLORS_TEAM_1 {
   BACKGROUND_BLUE = "#112233",
   HEADER_WHITE = "#FAF9FF",
   CARD_WHITE = "#FFFFFF",
 }
-
 
 export const LayoutWrapper = styled.div`
   display: flex;
