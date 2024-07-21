@@ -1,4 +1,11 @@
-import { useState, createContext, PropsWithChildren, ReactHTMLElement, ReactNode, ChildContextProvider } from "react";
+import {
+  useState,
+  createContext,
+  PropsWithChildren,
+  ReactHTMLElement,
+  ReactNode,
+  ChildContextProvider,
+} from "react";
 
 import { Employee } from "pages/EmployeeAppProject/Layout_Team_1/types";
 
@@ -17,7 +24,9 @@ export const EmployeeAppContext = createContext<EmployeeContextType>({
   setter: () => {},
 });
 
-export const EmployeeAppContextProvider = ({ children }:PropsWithChildren) => {
+export const EmployeeAppContextProvider = ({
+  children,
+}: PropsWithChildren<ReactNode>) => {
   const [employee, setEmployee] = useState<Employee>({
     name: "",
     surName: "",
