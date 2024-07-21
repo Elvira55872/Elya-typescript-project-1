@@ -26,7 +26,7 @@ export const EmployeeAppContext = createContext<EmployeeContextType>({
 
 export const EmployeeAppContextProvider = ({
   children,
-}: PropsWithChildren<ReactNode>) => {
+}: PropsWithChildren) => {
   const [employee, setEmployee] = useState<Employee>({
     name: "",
     surName: "",
