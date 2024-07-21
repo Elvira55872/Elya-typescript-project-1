@@ -11,7 +11,7 @@ import { Employee } from "pages/EmployeeAppProject/Layout_Team_1/types";
 
 export interface EmployeeContextType {
   employee: Employee;
-  setter: (e: Employee) => void;
+  setEmployee: (e: Employee) => void;
 }
 
 export const EmployeeAppContext = createContext<EmployeeContextType>({
@@ -21,7 +21,7 @@ export const EmployeeAppContext = createContext<EmployeeContextType>({
     age: 0,
     jobPosition: "",
   },
-  setter: () => {},
+  setEmployee: () => {},
 });
 
 export const EmployeeAppContextProvider = ({
@@ -36,7 +36,7 @@ export const EmployeeAppContextProvider = ({
 
   return (
     <EmployeeAppContext.Provider
-      value={{ employee: employee, setter: setEmployee }}
+      value={{ employee: employee, setEmployee: setEmployee }}
     >
       {children}
     </EmployeeAppContext.Provider>
