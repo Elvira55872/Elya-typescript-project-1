@@ -1,9 +1,11 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useContext } from "react";
 
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
 
+import { EmployeeAppContext } from "pages/EmployeeAppProject/contexts/EmployeeAppContext";
 import { UserDataFormContainer, InputContainer } from "./styles";
 
 function CreateEmployeeForm() {
@@ -38,47 +40,47 @@ function CreateEmployeeForm() {
 
   return (
     <UserDataFormContainer onSubmit={formik.handleSubmit}>
-        <InputContainer>
-      <Input
-        id="name-id"
-        name="name"
-        type="text"
-        placeholder="John"
-        label="Name*"
-        value={formik.values.name}
-        onChange={formik.handleChange}
-        error={formik.errors.name}
-      />
-      <Input
-        id="surname-id"
-        name="surname"
-        type="text"
-        placeholder="Johnson"
-        label="Surname*"
-        value={formik.values.surname}
-        onChange={formik.handleChange}
-        error={formik.errors.surname}
-      />
-      <Input
-        id="age-id"
-        name="age"
-        type="number"
-        placeholder="25"
-        label="Age*"
-        value={formik.values.age}
-        onChange={formik.handleChange}
-        error={formik.errors.age}
-      />
-      <Input
-        id="job-id"
-        name="job_position"
-        type="text"
-        placeholder="QA"
-        label="Job Position"
-        value={formik.values.job_position}
-        onChange={formik.handleChange}
-        error={formik.errors.job_position}
-      />
+      <InputContainer>
+        <Input
+          id="name-id"
+          name="name"
+          type="text"
+          placeholder="John"
+          label="Name*"
+          value={formik.values.name}
+          onChange={formik.handleChange}
+          error={formik.errors.name}
+        />
+        <Input
+          id="surname-id"
+          name="surname"
+          type="text"
+          placeholder="Johnson"
+          label="Surname*"
+          value={formik.values.surname}
+          onChange={formik.handleChange}
+          error={formik.errors.surname}
+        />
+        <Input
+          id="age-id"
+          name="age"
+          type="number"
+          placeholder="25"
+          label="Age*"
+          value={formik.values.age}
+          onChange={formik.handleChange}
+          error={formik.errors.age}
+        />
+        <Input
+          id="job-id"
+          name="job_position"
+          type="text"
+          placeholder="QA"
+          label="Job Position"
+          value={formik.values.job_position}
+          onChange={formik.handleChange}
+          error={formik.errors.job_position}
+        />
       </InputContainer>
       <Button disabled={formik.isSubmitting} name="Create" type="submit" />
     </UserDataFormContainer>
