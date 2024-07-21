@@ -11,7 +11,7 @@ import {
   NavigationContainer,
 } from "./styles";
 
-import { LayoutProps, Employee, PagesPaths } from "./types";
+import { LayoutProps, PagesPaths } from "./types";
 
 function Layout_Team_1({ children }: LayoutProps) {
   const navigate = useNavigate();
