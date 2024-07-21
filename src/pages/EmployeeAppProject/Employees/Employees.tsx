@@ -1,25 +1,10 @@
-import { EmployeesCard, TextDiv, TextLabel, TextContent } from "./styles";
+import Employees_Card from "../components/Employees_Card/EmployeesCard";
 
+import { EmployeesWrapper } from "./styles";
 
-function Employees () {
-    return (<EmployeesCard>
-        <TextDiv>
-            <TextLabel>Name</TextLabel>
-            <TextContent></TextContent>
-        </TextDiv>
-        <TextDiv>
-            <TextLabel>Surname</TextLabel>
-            <TextContent></TextContent>
-        </TextDiv>
-        <TextDiv>
-            <TextLabel>Age</TextLabel>
-            <TextContent></TextContent>
-        </TextDiv>
-        <TextDiv>
-            <TextLabel>Job Position</TextLabel>
-            <TextContent></TextContent>
-        </TextDiv>
-    </EmployeesCard>)
-} ;
+function Employees() {
 
-export default Employees; 
+  return <EmployeesWrapper><Employees_Card /></EmployeesWrapper>
+}
+
+export default Employees;
