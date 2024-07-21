@@ -6,8 +6,15 @@ function Employees_Card() {
 const { employee } = useContext(EmployeeAppContext);
 console.log(employee);
 
+const isCardVisible = () => {
+  if(employee.name == ""){
+    return "none";
+  }else return "flex";
+
+};
+
   return (
-    <EmployeesCard>
+    <EmployeesCard style={{ display: isCardVisible() }}>
       <TextDiv>
         <TextLabel>Name</TextLabel>
         <TextContent>{employee.name}</TextContent>
