@@ -7,36 +7,52 @@ import Input from "components/Input/Input";
 
 import { EmployeeAppContext } from "pages/EmployeeAppProject/contexts/EmployeeAppContext";
 import { UserDataFormContainer, InputContainer } from "./styles";
+import { Employee } from "pages/EmployeeAppProject/Layout_Team_1/types";
 
 function CreateEmployeeForm() {
+  const employeeDataContext = useContext(EmployeeAppContext);
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .required("Name field is required")
       .min(2, "Name field should contain minimum 2 symbols")
       .max(50, "Name field should contain maximum 50 symobols"),
-    surname: Yup.string()
+    surName: Yup.string()
       .required("Surame field is required")
       .max(15, "Surname field should contain maximum 15 symobols"),
-    age: Yup.string()
+    age: Yup.number()
       .required("Age field is required")
       .min(1, "Age field should contain minimum 1 symobol")
-      .max(3, "Age field should contain maximum 3 symobols"),
-    job_position: Yup.string().max(
+      .max(999, "Age field should contain maximum 3 symobols"),
+    jobPosition: Yup.string().max(
       30,
       "Job Position field should contain maximum 30 symobols"
     ),
   });
-  const formik = useFormik({
+  const formik = useFormik<Employee>({
     initialValues: {
       name: "",
-      surname: "",
-      age: "",
-      job_position: "",
+      surName: "",
+      age: 0,
+      jobPosition: "",
     },
     validationSchema: validationSchema,
     validateOnChange: false,
-    onSubmit: (values, helpers) => {},
+    onSubmit: (values, helpers) => {
+      employeeDataContext.setEmployee(values);
+      helpers.resetForm();
+    },
   });
+
+  const isDisabled = () => {
+    if (formik.dirty) {
+      return false;
+    } else if (formik.isSubmitting) {
+      return true;
+    } else {
+      return true;
+    }
+  };
 
   return (
     <UserDataFormContainer onSubmit={formik.handleSubmit}>
@@ -53,13 +69,13 @@ function CreateEmployeeForm() {
         />
         <Input
           id="surname-id"
-          name="surname"
+          name="surName"
           type="text"
           placeholder="Johnson"
           label="Surname*"
-          value={formik.values.surname}
+          value={formik.values.surName}
           onChange={formik.handleChange}
-          error={formik.errors.surname}
+          error={formik.errors.surName}
         />
         <Input
           id="age-id"
@@ -77,12 +93,12 @@ function CreateEmployeeForm() {
           type="text"
           placeholder="QA"
           label="Job Position"
-          value={formik.values.job_position}
+          value={formik.values.jobPosition}
           onChange={formik.handleChange}
-          error={formik.errors.job_position}
+          error={formik.errors.jobPosition}
         />
       </InputContainer>
-      <Button disabled={formik.isSubmitting} name="Create" type="submit" />
+      <Button disabled={isDisabled()} name="Create" type="submit" />
     </UserDataFormContainer>
   );
 }
