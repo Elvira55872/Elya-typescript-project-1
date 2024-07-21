@@ -2,9 +2,6 @@ import {
   useState,
   createContext,
   PropsWithChildren,
-  ReactHTMLElement,
-  ReactNode,
-  ChildContextProvider,
 } from "react";
 
 import { Employee } from "pages/EmployeeAppProject/Layout_Team_1/types";

@@ -1,4 +1,4 @@
-import CreateEmployeeForm from "../components/CreateEmployeeForm/CreateEmployeeForm";
+import CreateEmployeeForm from "pages/EmployeeAppProject/components/CreateEmployeeForm/CreateEmployeeForm";
 
 function CreateEmployee() {
   return <CreateEmployeeForm />;
