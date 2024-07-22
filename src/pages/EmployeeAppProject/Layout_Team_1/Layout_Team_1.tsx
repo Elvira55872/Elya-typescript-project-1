@@ -1,5 +1,6 @@
-import { EmployeeAppContextProvider} from "../contexts/EmployeeAppContext";
 import { useNavigate } from "react-router-dom";
+
+import { EmployeeAppContextProvider } from "pages/EmployeeAppProject/contexts/EmployeeAppContext";
 
 import {
   LayoutWrapper,
@@ -10,7 +11,6 @@ import {
   LogoImg,
   NavigationContainer,
 } from "./styles";
-
 import { LayoutProps, PagesPaths } from "./types";
 
 function Layout_Team_1({ children }: LayoutProps) {
