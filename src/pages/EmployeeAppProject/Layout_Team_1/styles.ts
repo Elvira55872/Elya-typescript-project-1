@@ -21,7 +21,7 @@ export const Header = styled.header`
   width: 100%;
   height: 100px;
   background-color: ${COLORS_TEAM_1.HEADER_WHITE};
-  padding: 20px 40px;
+  padding: 20px 84px;
   color: black;
 `;
 
@@ -38,7 +38,7 @@ export const LogoImg = styled.img`
 
 export const NavigationContainer = styled.nav`
   display: flex;
-  gap: 30px;
+  gap: 56px;
   height: 100%;
   align-items: center;
 `;

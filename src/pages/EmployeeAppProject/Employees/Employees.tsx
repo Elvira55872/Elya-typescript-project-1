@@ -1,4 +1,4 @@
-import Employees_Card from "pages/EmployeeAppProject/components/Employees_Card/EmployeesCard";
+import Employees_Card from "pages/EmployeeAppProject/components/EmployeesСard/EmployeesCard";
 
 import { EmployeesWrapper } from "./styles";
 
