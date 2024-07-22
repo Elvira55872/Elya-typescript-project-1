@@ -13,6 +13,12 @@ function Employees_Card() {
     } else return "flex";
   };
 
+  const isJobInserted = () => {
+    if (employee.jobPosition == "") {
+      return "none";
+    } else return "flex";
+  };
+
   return (
     <EmployeesCard style={{ display: isCardVisible() }}>
       <TextDiv>
@@ -27,7 +33,7 @@ function Employees_Card() {
         <TextLabel>Age</TextLabel>
         <TextContent>{employee.age}</TextContent>
       </TextDiv>
-      <TextDiv>
+      <TextDiv style={{ display: isJobInserted() }}>
         <TextLabel>Job Position</TextLabel>
         <TextContent>{employee.jobPosition}</TextContent>
       </TextDiv>
