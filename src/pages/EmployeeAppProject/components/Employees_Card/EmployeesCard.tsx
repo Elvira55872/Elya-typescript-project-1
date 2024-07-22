@@ -1,17 +1,17 @@
 import { useContext } from "react";
+
 import { EmployeeAppContext } from "pages/EmployeeAppProject/contexts/EmployeeAppContext";
+
 import { EmployeesCard, TextDiv, TextLabel, TextContent } from "./styles";
 
 function Employees_Card() {
-const { employee } = useContext(EmployeeAppContext);
-console.log(employee);
+  const { employee } = useContext(EmployeeAppContext);
 
-const isCardVisible = () => {
-  if(employee.name == ""){
-    return "none";
-  }else return "flex";
-
-};
+  const isCardVisible = () => {
+    if (employee.name == "") {
+      return "none";
+    } else return "flex";
+  };
 
   return (
     <EmployeesCard style={{ display: isCardVisible() }}>
