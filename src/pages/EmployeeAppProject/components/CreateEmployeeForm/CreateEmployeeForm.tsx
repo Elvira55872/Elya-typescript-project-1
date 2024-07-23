@@ -29,6 +29,7 @@ function CreateEmployeeForm() {
       "Job Position field should contain maximum 30 symobols"
     ),
   });
+
   const formik = useFormik<Employee>({
     initialValues: {
       name: "",
@@ -44,15 +45,17 @@ function CreateEmployeeForm() {
     },
   });
 
-  const isDisabled = () => {
-    if (formik.dirty) {
-      return false;
-    } else if (formik.isSubmitting) {
-      return true;
-    } else {
-      return true;
-    }
-  };
+  // const isDisabled = () => {
+  //   if (formik.dirty) {
+  //     return false;
+  //   } else if (formik.isSubmitting) {
+  //     return true;
+  //   } else {
+  //     return true;
+  //   }
+  // };
+
+
 
   return (
     <UserDataFormContainer onSubmit={formik.handleSubmit}>
@@ -98,7 +101,7 @@ function CreateEmployeeForm() {
           error={formik.errors.jobPosition}
         />
       </InputContainer>
-      <Button disabled={isDisabled()} name="Create" type="submit" />
+      <Button disabled={formik.dirty || formik.isSubmitting} name="Create" type="submit" />
     </UserDataFormContainer>
   );
 }

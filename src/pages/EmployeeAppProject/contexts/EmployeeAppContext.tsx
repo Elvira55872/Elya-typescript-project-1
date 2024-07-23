@@ -17,6 +17,7 @@ export const EmployeeAppContext = createContext<EmployeeContextType>({
   setEmployee: () => {},
 });
 
+// сделать компонентом через function 
 export const EmployeeAppContextProvider = ({ children }: PropsWithChildren) => {
   const [employee, setEmployee] = useState<Employee>({
     name: "",

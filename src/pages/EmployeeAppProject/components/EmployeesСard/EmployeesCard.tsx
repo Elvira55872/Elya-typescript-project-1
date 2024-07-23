@@ -7,6 +7,7 @@ import { EmployeesCard, TextDiv, TextLabel, TextContent } from "./styles";
 function Employees_Card() {
   const { employee } = useContext(EmployeeAppContext);
 
+  // перенести в папку styles 
   const isCardVisible = () => {
     if (employee.name == "") {
       return "none";
