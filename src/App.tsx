@@ -21,13 +21,14 @@ import Lesson_09 from "lessons/Lesson09/Lesson09";
 import Lesson_10 from "lessons/Lesson10/Lesson_10";
 import Lesson_11 from "lessons/Lesson11/Lesson_11";
 import Homework_11 from "homeworks/Homework11/Homework11";
+import Homework13 from "homeworks/Homework13/Homework13";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <GlobalStyles />
-        <Layout>
+        {/* <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -39,7 +40,7 @@ function App() {
             <Route path="/clients/client_3" element={<Facebook />} />
             <Route path="*" element="Page Not Found!!!" />
           </Routes>
-        </Layout>
+        </Layout> */}
         {/* <Lesson06 /> */}
         {/* <Homework06/> */}
         {/* <Lesson07 /> */}
@@ -50,6 +51,7 @@ function App() {
         {/* <Lesson_10/> */}
         {/* <Lesson_11/> */}
         {/* <Homework_11/> */}
+        <Homework13/>
       </BrowserRouter>
     </>
   );
