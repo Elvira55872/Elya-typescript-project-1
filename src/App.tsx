@@ -22,12 +22,17 @@ import Lesson_10 from "lessons/Lesson10/Lesson_10";
 import Lesson_11 from "lessons/Lesson11/Lesson_11";
 import Homework_11 from "homeworks/Homework11/Homework11";
 
+import Layout_Team_1 from "pages/EmployeeAppProject/Layout_Team_1/Layout_Team_1";
+import CreateEmployee from "pages/EmployeeAppProject/CreateEmployee/CreateEmployee";
+import Employees from "pages/EmployeeAppProject/Employees/Employees";
+import { PagesPaths } from "pages/EmployeeAppProject/Layout_Team_1/types";
+
 function App() {
   return (
     <>
       <BrowserRouter>
         <GlobalStyles />
-        <Layout>
+        {/* <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -39,7 +44,18 @@ function App() {
             <Route path="/clients/client_3" element={<Facebook />} />
             <Route path="*" element="Page Not Found!!!" />
           </Routes>
-        </Layout>
+        </Layout> */}
+        <Layout_Team_1>
+          <Routes>
+            <Route path={PagesPaths.HOME}></Route>
+            <Route
+              path={PagesPaths.CREATE_EMPLOYEES}
+              element={<CreateEmployee />}
+            />
+            <Route path={PagesPaths.EMPLOYEES} element={<Employees />} />
+            <Route path="*" element="Page not found" />
+          </Routes>
+        </Layout_Team_1>
         {/* <Lesson06 /> */}
         {/* <Homework06/> */}
         {/* <Lesson07 /> */}
